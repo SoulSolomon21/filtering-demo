@@ -76,7 +76,7 @@ export default function Home() {
         queryKey: ["product"],
         queryFn: async () => {
             const {data} = await axios.post<QueryResult<ProductType>[]>(
-                "http://localhost:3000/api/products", {
+                "/api/products", {
                     filter: {
                         sort: filter.sort,
                         color: filter.color,
