@@ -45,7 +45,7 @@ export const POST = async (req: NextRequest) => {
         filter.addRaw("price", `price >= ${price[0]} AND price <= ${price[1]}`)
 
         const products = await db.query({
-            topK: 30,
+            topK: 15,
             vector: [
                 0,
                 0,
